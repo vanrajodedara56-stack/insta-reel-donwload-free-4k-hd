@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Insta Reel & Post Downloader - Free 4K HD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: white;
+    }
+    .container {
+      background: rgba(0,0,0,0.7);
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 28px;
+      color: #ffdd00;
+      text-shadow: 1px 1px 5px #000;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    button {
+      background: linear-gradient(90deg, #fcb045, #fd1d1d, #833ab4);
+      border: none;
+      padding: 14px 30px;
+      border-radius: 10px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.3s ease;
+      width: 100%;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    .result {
+      margin-top: 25px;
+      color: #fff;
+      font-weight: 600;
+    }
+    .download-link {
+      margin-top: 15px;
+      display: inline-block;
+      background: #ffdd00;
+      padding: 10px 20px;
+      color: black;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📥 Insta Reel & Post Downloader</h1>
+    <input type="text" id="urlInput" placeholder="Paste Instagram Reel or Post URL here" />
+    <button onclick="simulateDownload()">Download</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function simulateDownload() {
+      const url = document.getElementById('urlInput').value.trim();
+      const resultDiv = document.getElementById('result');
+
+      if (!url) {
+        alert('Please enter a valid Instagram URL!');
+        resultDiv.innerHTML = '';
+        return;
+      }
+
+      // NOTE: This is a simulation only.
+      // Real implementation requires server/API to get actual video download link.
+
+      resultDiv.innerHTML = `
+        <p>Preview (simulated):</p>
+        <video width="100%" controls autoplay muted>
+          <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <a href="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" download class="download-link">⬇ Download Now</a>
+      `;
+    }
+  </script>
+</body>
+</html>
